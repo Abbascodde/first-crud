@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+  rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="crud.css">
+  <title>First Crude App</title>
+</head>
+
+
+<body onload="readAll()">
+<div class="container">
+  <div class="form_container">
+    <form class="create_form">
+      <input type="text" class="name" placeholder="Name"/>
+      <input type="email" class="email" placeholder="Your Email"/>
+      <button class="btn bg-slate-500 text-white" type="button" onclick="add()">Create</button>
+    </form>
+    
+    <form class="update_form">
+      <input type="text" hidden class="id" placeholder="Name"/>
+      <input type="text" class="uname" placeholder="Name"/>
+      <input type="email" class="uemail" placeholder="Your Email"/>
+      <button class="btn" onclick="update()" type="button">Update</button>
+    </form>
+
+
+  <div class="add_div">
+    <button type="button" onclick="create()" class="btn">Add + </button>
+  </div>
+   
+    <table>
+      <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Edit</th>
+      </thead>
+      <tbody class="data_table">
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="./crud.js"></script>
+</body>
+</html>
